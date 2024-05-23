@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/myCake.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CakesOnTop</title>
+    <style>
+      /* width */
+      .custom_dropdown::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      /* Track */
+      .custom_dropdown::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      .custom_dropdown::-webkit-scrollbar-thumb {
+        /* background: rgb(205 162 243); */
+        background: #888;
+        /* --tw-bg-opacity: 1;
+        background: rgb(147 51 234 / var(--tw-bg-opacity)); */
+        border-radius: 20px;
+      }
+
+      /* Handle on hover */
+      .custom_dropdown::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+  </head>
+  <body class="custom_dropdown">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
