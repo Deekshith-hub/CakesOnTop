@@ -27,6 +27,7 @@ const Navbar = () => {
           <NavLink to={'/cakes/pastry'} className={({ isActive, isPending }) =>isPending ? "text-red-700" : isActive ? "mr-5 text-purple-700 underline cursor-pointer font-bold" : "mr-5 hover:text-purple-700 cursor-pointer font-bold"}>Pastries</NavLink>
           <NavLink to={'/cakes/ice'} className={({ isActive, isPending }) =>isPending ? "text-red-700" : isActive ? "mr-5 text-purple-700 underline cursor-pointer font-bold" : "mr-5 hover:text-purple-700 cursor-pointer font-bold"}>Ice Cakes</NavLink>
           <NavLink to={'/cakes/cup'} className={({ isActive, isPending }) =>isPending ? "text-red-700" : isActive ? "mr-5 text-purple-700 underline cursor-pointer font-bold" : "mr-5 hover:text-purple-700 cursor-pointer font-bold"}>Cup Cakes</NavLink>
+          <NavLink to={'/addcakes'} className={({ isActive, isPending }) =>isPending ? "text-red-700" : isActive ? "mr-5 text-purple-700 underline cursor-pointer font-bold" : "mr-5 hover:text-purple-700 cursor-pointer font-bold"}>Add Cakes</NavLink>
         </nav>
         <BsCart2 className="text-3xl hover:cursor-pointer hover:text-purple-700 mr-6" onMouseOver={()=>{setCartList(true)}} onMouseLeave={()=>{setCartList(false)}} />
 

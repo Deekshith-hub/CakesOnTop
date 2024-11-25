@@ -43,3 +43,13 @@ userRouter.post(
         res.send(await userModel.checkExistUser(req.body));
     }
 )
+
+userRouter.post(
+    '/',
+    async (
+        req: Request,
+        res: Response
+    ) => {        
+        res.send(await userModel.checkSessionExpire(req.body));
+    }
+)

@@ -25,8 +25,6 @@ const Login = () => {
     if(response.success)
     {
       localStorage.setItem('token', response.token);
-      sessionStorage.setItem('name', response.name);
-      sessionStorage.setItem('phone', response.phone);
       toast.success('Your are successfully logged in!', {
         position: "top-left",
         autoClose: 2000,

@@ -5,6 +5,10 @@ import { cakesRouter } from "./router/cakes";
 const app = express();
 app.use(express.json());
 
+app.get('/', () => {
+  console.log('Delicious cake is serving!!!');
+})
+
 app.use("/user", userRouter)
 app.use("/cakes", cakesRouter)
 

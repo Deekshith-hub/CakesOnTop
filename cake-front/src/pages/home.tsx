@@ -1,5 +1,7 @@
 import LoginWrapper from "../utils/middleware"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { UserContext } from "../App";
+import { json } from "react-router-dom";
 
 class Data {
   userId: number = 0;
@@ -9,7 +11,11 @@ class Data {
 }
 
 const Home = () => {
-  const [list, setList] = useState<Data[]>([]);  
+  const [list, setList] = useState<Data[]>([]); 
+  const { logout } = useContext(UserContext);
+
+  
+   
 
   return (
     <>

@@ -72,7 +72,7 @@ export class userModel {
                 
 
                 if(data.phone == user[0].user_id && data.password == decryptedPass) {
-                    var token = jwt.sign({phone: user[0].user_id, name: user[0].name, email: user[0].email, role_id: user[0].role_id }, 'jwtsecret', {expiresIn: "1d"});
+                    var token = jwt.sign({phone: user[0].user_id, name: user[0].name, email: user[0].email, role_id: user[0].role_id }, 'signedByDk007', {expiresIn: "1d"});
                     return {success: true, token, name: user[0].name, phone: user[0].user_id}
                 }
                 else {
@@ -137,6 +137,16 @@ export class userModel {
             } else {
                 return {success: false};
             }
+        } catch (error) {
+            return {error: error.message};
+        }
+    }
+
+    static async checkSessionExpire(data: any)
+    {        
+        try {
+            let status = jwt.verify(data.token, 'signedByDk007');
+            return {status};
         } catch (error) {
             return {error: error.message};
         }
